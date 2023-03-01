@@ -22,4 +22,4 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
   }
 };
 
-module.exports.tags = ["deploy", "mock", "mainnet-prices", "goerli-prices"];
+module.exports.tags = ["deploy", "mock", "goerli-prices"];

@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-## Chainlink Price Feeds on Optimism (Goerli and Mainnet)
+# Chainlink Price Feeds on Optimism (Goerli and Mainnet)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -23,13 +23,13 @@
 
 ## About The Project
 
-If you're developing on Optimism, instead of wasting your sacred and precious time searching for the Chainlink price feeds and messing around with `latestRoundData()`, just inherit these contracts and sit back and take a load off, why don't ya? These contracts have all currently available pairs on Optimism - Goerli and Optimism - Mainnet, with the exception of BUSD (since it's death has been proclaimed) and DOGE, because I don't want to. (If you're a smarmy whale and are feeling extra meme-y and saucy, feel free to call `imALittleMemeZealot()` and send 1 ETH with the call to the contract on Mainnet, and it will automatically add DOGE to the price feed mapping `s_priceFeeds`. I think it's a reasonable ask for selling out part of my soul. You can also send 0.01 testnet ETH to the Goerli contract to do the same, but I mean, like, why?)
+If you're developing on Optimism, instead of wasting your sacred and precious time searching for the Chainlink price feeds and messing around with `latestRoundData()`, just inherit these contracts and sit back and take a load off, why don't ya? These contracts have all currently available pairs on Optimism - Goerli and Optimism - Mainnet, with the exception of BUSD (since it's death has been proclaimed) and DOGE, because I don't want to. (The Op-Mainnet version will be deployed soon, and if you're a smarmy whale and are feeling extra meme-y and saucy, feel free to call `imALittleMemeZealot()` and send 1 ETH with the call to the contract on Op-Mainnet, and it will automatically add DOGE to the price feed mapping `s_priceFeeds`. I think it's a reasonable ask for selling out part of my soul. You can also send 0.01 testnet ETH to the Goerli contract to do the same, but I mean, like, why?)
 
 Once you inherit either contract, if it's a USD pair, call `getUSDPrice()` with the ticker symbol as an input and you'll now have the USD price. If you need the other side of the pair, divide a USD value by the return of `getUSDPrice()`. Call `getUSDAmount()` with amount and ticker symbol as inputs to get the amount in USD. I included a `getPriceOf()` function, for non-USD price feeds as well.
 
 See the Usage Notes section below for a quick word on the returned decimals of these functions.
 
-<u>Ticker Symbols for all Available Price Feeds</u>
+### Ticker Symbols for all Available Price Feeds
 
 OPTIMISM - GOERLI:
 
@@ -48,7 +48,7 @@ https://docs.chain.link/data-feeds/selecting-data-feeds
 
 I'll try to keep these contracts updated using the add/change/remove functions as Chainlink adds/removes data feeds, but please let me know if you see any changes that have not been reflected yet. (Side note: I've read in a few places that Chainlink will never change the contract addresses to these price feeds, but you can never know for sure. That said, it does add another moving part to these contracts, so if people want that functionality removed, I'm definitely open to it.)
 
-<u>Contract Links</u>
+### Contract Links
 
 Contract Address on Optimism - Goerli Testnet: `0xb1f2D9f670ec966056823E605E17804383aeC374`
 
@@ -56,15 +56,15 @@ Contract Address on Optimism - Mainnet: Coming soon
 
 <p>
 
-[OP Price Feeds Contract Page on Optimistim Etherscan - Goerli](https://goerli-optimism.etherscan.io/address/0xb1f2D9f670ec966056823E605E17804383aeC374#code)
+[OP Price Feeds Contract Page on Optimistic Etherscan - Goerli](https://goerli-optimism.etherscan.io/address/0xb1f2D9f670ec966056823E605E17804383aeC374#code)
 
-OP Price Feeds Contract Page on Optimistim Etherscan - Mainnet: coming soon
+OP Price Feeds Contract Page on Optimistic Etherscan - Mainnet: Coming soon
 
-<u>Project Highlights</u>
+### Project Highlights
 
 - My first mainnet deployment is coming shortly!
 
-<u>Background in case you care:</u>
+### Background in Case You Care
 
 As I've been building my blockchain dev portfolio, I've found that the projects I start tend to spiral out, getting bigger and more complex, and so it's taken me a long time to finish them. Thus, I made it a challenge to myself to make a super simple contract tool. I've found myself needing to use Chainlink Data Feeds a lot in development, so I thought I'd make this tool in case anyone else finds themselves in the same boat. I also wanted to contribute to the open source / public goods movement, as well as to deploy a project to a mainnet, so it seemed like a great fit to deploy on Optimism.
 

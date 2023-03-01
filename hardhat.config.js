@@ -51,7 +51,7 @@ module.exports = {
     },
     polygonMainnet: {
       url: POLYGON_MAINNET_RPC_URL,
-      accounts: [PRIVATE_KEY], // Change to deployment wallet address private key.
+      accounts: [PRIVATE_KEY],
       chainId: 137,
       blockConfirmations: 6,
     },
